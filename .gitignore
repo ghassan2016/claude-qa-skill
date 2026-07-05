@@ -1,0 +1,20 @@
+# Environment & secrets
+.env
+.env.local
+.env.*.local
+
+# Personal config (don't commit your tokens)
+references/10_channel-integration.local.md
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Editor
+.vscode/
+.idea/
+*.swp
+
+# Build artifacts
+*.zip
+dist/
