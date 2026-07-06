@@ -1,6 +1,6 @@
 ---
 name: ghassan-ahmed-tester
-description: Professional QA, UX/UI testing, code review, and security assessment agent for web and mobile products. Use for ANY quality, testing, or review task — writing test plans, executing test cases, filing bug reports with severity classification and reproduction steps, reviewing code quality (React, Next.js, Flutter, Node.js, Supabase, Convex, REST APIs), auditing UX flows and UI visual consistency, running OWASP security scans, testing performance with Lighthouse and Core Web Vitals, assessing release readiness with GO/NO-GO verdicts, and delivering structured professional reports that push automatically to Discord, Jira, or WhatsApp. Trigger on: "test this", "review this code", "write test cases", "bug report", "is this ready to ship", "review my PR", "QA this feature", "check this flow", "security scan", "performance issues", "UX review", "release gate", "what's wrong with this", "خطة اختبار", "راجع الكود", "في مشكلة", "فحص أمني", "هل نطلق", "ارسل للقناة", or any request to evaluate, audit, or verify a web/mobile product, screen, API, or codebase. When in doubt, use this skill — it covers the full QA lifecycle from test plan to channel push.
+description: Professional QA, UX/UI testing, code review, and security assessment agent for web and mobile products. Use for ANY quality, testing, or review task — writing test plans, executing test cases, filing bug reports with severity classification and reproduction steps, reviewing code quality (React, Next.js, Flutter, Node.js, Supabase, Convex, REST APIs), auditing UX flows and UI visual consistency, running OWASP security scans, testing performance with Lighthouse and Core Web Vitals, assessing release readiness with GO/NO-GO verdicts, orchestrating multi-phase QA missions (Super Power mode with mission board, checkpoints, and consolidated master reports), building intelligent risk-based test plans with requirements traceability matrices (RTM) and drift tracking, validating data quality and accuracy across 6 dimensions (accuracy, completeness, consistency, validity, uniqueness, timeliness) with SQL/Convex/Supabase checks, profiling data schema/shape/volume (schema drift detection, contract validation, statistical shape profiling, 10x scale testing), and delivering structured professional reports that push automatically to Discord, Jira, or WhatsApp. Trigger on: "test this", "review this code", "write test cases", "bug report", "is this ready to ship", "review my PR", "QA this feature", "check this flow", "security scan", "performance issues", "UX review", "release gate", "what's wrong with this", "super power", "smart plan", "traceability", "data quality", "wrong totals", "خطة اختبار", "راجع الكود", "في مشكلة", "فحص أمني", "هل نطلق", "ارسل للقناة", "سوبر باور", "تخطيط ذكي", "دقة البيانات", "الأرقام غلط", "حجم البيانات", "نظام البيانات", "شكل البيانات", "schema drift", "scale test", or any request to evaluate, audit, or verify a web/mobile product, screen, API, or codebase. When in doubt, use this skill — it covers the full QA lifecycle from test plan to channel push.
 ---
 
 # Claude QA Skill
@@ -56,8 +56,14 @@ If ambiguous → ask one targeted question to resolve, then proceed.
 | `e2e` | "write E2E tests", "Playwright", "Cypress", "اكتب اختبارات", test automation | `11_e2e-testing.md` |
 | `api-contract` | "test this API", "Postman", "Newman", "فحص الـ endpoints", contract test | `12_api-contract-testing.md` |
 | `channel-push` | "ارسل للقناة", "push to Discord", "create Jira issue" | `10_channel-integration.md` |
+| `super-power` | "super power", "سوبر باور", "جهز للإطلاق", "certify", multi-domain goal needing 3+ modes | `13_super-power.md` |
+| `smart-plan` | "تخطيط ذكي", "risk-based plan", "RTM", "traceability", "تتبع", "هل غطينا كل شي" | `14_smart-planning.md` |
+| `data-quality` | "دقة البيانات", "جودة البيانات", "الأرقام غلط", wrong totals, duplicates, migration check, "data accuracy" | `15_data-quality.md` |
+| `data-profiling` | "حجم البيانات", "نظام البيانات", "شكل البيانات", "schema", "drift", "scale test", "هل يتحمل الضغط", new dataset/integration | `16_data-profiling.md` |
 
 > **full-audit sequence:** Load and execute `05_ux-testing.md` → `07_ui-audit.md` → `08_security-testing.md` → `09_performance-testing.md` → `06_release-gate.md` in order. Produce an executive summary + section findings per domain. Then push consolidated report to OUTPUT_CHANNEL.
+
+> **super-power vs full-audit:** `full-audit` is a fixed sequence. `super-power` (`13_super-power.md`) is the orchestrator — it builds a custom mission plan via `14_smart-planning.md`, sequences any modes with dependency rules, maintains a Mission Board with checkpoints, tracks RTM coverage and drift, and consolidates everything into one Master Report with a single GO/NO-GO. Any engagement spanning 3+ modes or multiple sprints → `super-power`.
 
 ---
 
@@ -135,6 +141,9 @@ Apply stack-specific checklist sections from reference files when a stack is det
 9. **RTL is a first-class citizen** — Arabic/RTL UX must be tested explicitly.
 10. **Empty states are features** — every list, table, and dashboard needs one.
 11. **Every finding gets pushed** — no report stays local. Channel push is the final step.
+12. **Plan by risk, not by list** — test effort follows impact × likelihood (60/30/10 rule in `14`).
+13. **Nothing untraced ships** — every requirement → test case → result → bug → release status (RTM in `14`). Coverage gaps are reported, never hidden.
+14. **Correct data beats working UI** — a perfect screen showing a wrong total is an S1. Money math, aggregates, and cross-tenant boundaries get data-quality checks (`15`) on every release.
 
 ---
 

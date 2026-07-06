@@ -2,7 +2,7 @@
 
 > A production-grade QA agent for Claude — covering the full testing lifecycle from test plans to channel push.
 
-![Version](https://img.shields.io/badge/version-1.0.0-blue)
+![Version](https://img.shields.io/badge/version-1.2.0-blue)
 ![License](https://img.shields.io/badge/license-MIT-green)
 ![Claude](https://img.shields.io/badge/Claude-Skill-orange)
 ![Stacks](https://img.shields.io/badge/stacks-Next.js%20·%20Flutter%20·%20Supabase%20·%20Convex-purple)
@@ -22,6 +22,10 @@ Install once. Claude becomes a senior QA engineer that:
 - Tests performance against Core Web Vitals (LCP / INP / CLS)
 - Writes E2E tests in Playwright or Cypress
 - Tests API contracts with Postman/Newman
+- Builds risk-based smart test plans with a Requirements Traceability Matrix (RTM)
+- Validates data quality and accuracy across 6 dimensions (SQL / Supabase / Convex checks)
+- Profiles data structure: schema drift, statistical shape, and 10x volume/scale testing
+- Orchestrates full multi-phase QA missions (Super Power mode) with a live mission board
 - Delivers a GO/NO-GO release gate verdict
 - **Pushes every finding to Discord, Jira, or WhatsApp automatically**
 
